@@ -1,0 +1,10 @@
+﻿@model Flower
+
+<div class="card" style="width: 18rem;">
+    <img src="/Images/rae-galatas-EVvzhwW2M9k-unsplash.jpg" class="card-img-top" width="100" height="250" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Orchid</h5>
+        <p class="card-text">@Model.Description. Available in @Model.Color  $@Model.Price</p>
+        <a class="btn btn-primary" asp-action="Index" asp-route-id = "@Model"> Back to list</a> 
+    </div>
+</div>

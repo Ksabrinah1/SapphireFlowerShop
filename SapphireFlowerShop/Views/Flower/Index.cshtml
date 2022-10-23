@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Flower>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(x => x.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.Price)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+    @foreach (Flower flower in Model)
+    {
+        <tr>
+            <td>
+                @flower.Id
+            </td>
+            <td>
+                @flower.Name
+            </td>
+            <td>
+                @flower.Color
+            </td>
+            <td>
+                @flower.Description
+            </td>
+            <td>
+                @flower.Price
+            </td>
+           <td>
+                <a asp-controller="Album" asp-action="Details" asp-route-id="@flower.Id">Details</a>
+                <a asp-controller="Album" asp-action="Edit" asp-route-id="@flower.Id">Edit</a>
+                <a asp-controller="Album" asp-action="Delete" asp-route-id="@flower.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
