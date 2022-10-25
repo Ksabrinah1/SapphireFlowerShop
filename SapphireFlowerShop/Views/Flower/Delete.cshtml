@@ -1,0 +1,26 @@
+﻿@model Flower
+<h2>Delete This Flower?</h2>
+<form asp-action="Delete" method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Color" class="control-label"></label>
+        <input asp-for="Color" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Edit the album" class="btn btn-primary" />
+    </div>
+
+
+
+</form>
